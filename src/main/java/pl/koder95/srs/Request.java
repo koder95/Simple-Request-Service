@@ -22,6 +22,12 @@ public final class Request {
         return new Builder();
     }
 
+    @Override
+    public String toString() {
+        return this.getMethod() + " " + this.getPath() + " " + this.getProtocol().getText() + "\n" +
+                this.getHeaders().stream().map(Header::toString) + "\n" + this.getBody();
+    }
+
     public static class Builder {
         private Method method;
         private String path;
