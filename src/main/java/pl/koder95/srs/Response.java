@@ -50,17 +50,7 @@ public final class Response {
 
         public Response build() {
             return new Response(
-                    this.message == null? new Message() {
-                        @Override
-                        public int getStatusCode() {
-                            return 444;
-                        }
-
-                        @Override
-                        public String getText() {
-                            return "No Response";
-                        }
-                    } : this.message,
+                    this.message == null? StandardMessage.STATUS_444 : this.message,
                     Collections.unmodifiableSet(this.headers),
                     this.body
             );
