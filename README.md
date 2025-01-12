@@ -1,11 +1,19 @@
 # Simple Request Service
 Projekt dostarcza interfejs dostawcy serwisu wysyłania żądań HTTP.
+```xml
+<dependency>
+  <groupId>pl.koder95</groupId>
+  <artifactId>srs</artifactId>
+  <version>0.0.1</version>
+</dependency>
+```
 
 Wykonywanie żądań dokonuje się za pomocą interfejsu `Call`, którego implementację dostarcza interfejs `CallHandler`.
 Za jego pomocą usługa `Service` może obsługiwać kolejkę żądań `Request`. Odpowiedzi `Response` na żądania mogą być przechwycone
 przez interfejs `Callback`, w celu ich dowolnej obsługi.
 
 Biblioteka dostarcza również definicję wszystkich metod żądań HTTP (enumeracja `Method`).
+
 
 ## Uruchamianie usługi
 Przykładowy kod uruchamiający serwis:
