@@ -4,7 +4,7 @@
 
   <groupId>pl.koder95</groupId>
   <artifactId>srs</artifactId>
-  <version>0.0.4</version>
+  <version>0.1.0</version>
   <packaging>jar</packaging>
 
   <name>Simple Request Service</name>
@@ -42,7 +42,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.release>8</maven.compiler.release>
+    <maven.compiler.release>17</maven.compiler.release>
   </properties>
 
   <dependencies>
@@ -66,19 +66,19 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.13.0</version>
         <configuration>
-          <release>8</release>
-          <source>8</source>
-          <target>8</target>
+          <release>17</release>
+          <source>9</source>
+          <target>9</target>
         </configuration>
       </plugin>
       <plugin>
         <groupId>org.sonatype.plugins</groupId>
         <artifactId>nexus-staging-maven-plugin</artifactId>
-        <version>1.6.7</version>
+        <version>1.7.0</version>
         <extensions>true</extensions>
         <configuration>
           <serverId>ossrh</serverId>
-          <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
+          <nexusUrl>https://oss.sonatype.org/</nexusUrl>
           <autoReleaseAfterClose>true</autoReleaseAfterClose>
         </configuration>
       </plugin>

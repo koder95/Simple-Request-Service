@@ -126,38 +126,6 @@ public enum StandardMessage implements Message {
         this.text = text;
     }
 
-    public boolean isInformational() {
-        return getGroup() == 1;
-    }
-
-    public boolean isSuccess() {
-        return getGroup() == 2;
-    }
-
-    public boolean isRedirection() {
-        return getGroup() == 3;
-    }
-
-    public boolean isClientError() {
-        return getGroup() == 4;
-    }
-
-    public boolean isServerError() {
-        return getGroup() == 5;
-    }
-
-    public boolean isCustomError() {
-        return getGroup() == 6;
-    }
-
-    public boolean isUnknownError() {
-        return getGroup() == 9;
-    }
-
-    public boolean isError() {
-        return isClientError() || isServerError() || isCustomError() || isUnknownError();
-    }
-
     public static StandardMessage valueOf(int statusCode) {
         return statusCode < 100 || statusCode >= 1000? null : StandardMessage.valueOf("STATUS_" + statusCode);
     }
