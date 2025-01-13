@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import java.util.Collections;
 import java.util.LinkedHashSet;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 @RequiredArgsConstructor(access = AccessLevel.PRIVATE)
 @Data
@@ -25,7 +26,7 @@ public final class Request {
     @Override
     public String toString() {
         return this.getMethod() + " " + this.getPath() + " " + this.getProtocol().getText() + "\n" +
-                this.getHeaders().stream().map(Header::toString) + "\n" + this.getBody();
+                this.getHeaders().stream().map(Header::toString).collect(Collectors.toList()) + "\n" + this.getBody();
     }
 
     public static class Builder {
