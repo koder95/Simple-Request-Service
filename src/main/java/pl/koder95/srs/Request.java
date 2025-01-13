@@ -26,7 +26,8 @@ public final class Request {
     @Override
     public String toString() {
         return this.getMethod() + " " + this.getPath() + " " + this.getProtocol().getText() + "\n" +
-                this.getHeaders().stream().map(Header::toString).collect(Collectors.toList()) + "\n" + this.getBody();
+                this.getHeaders().stream().map(Header::toString).collect(Collectors.joining("\n")) +
+                "\n\n" + this.getBody();
     }
 
     public static class Builder {

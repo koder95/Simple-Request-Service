@@ -20,7 +20,8 @@ public final class Response {
     @Override
     public String toString() {
         return this.getMessage().getStatusCode() + " " + this.getMessage().getText() + "\n" +
-                this.getHeaders().stream().map(Header::toString).collect(Collectors.toList()) + "\n" + this.getBody();
+                this.getHeaders().stream().map(Header::toString).collect(Collectors.joining("\n")) +
+                "\n\n" + this.getBody();
     }
 
     public static Builder builder() {
