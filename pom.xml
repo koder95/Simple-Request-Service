@@ -4,7 +4,7 @@
 
   <groupId>pl.koder95</groupId>
   <artifactId>srs</artifactId>
-  <version>0.0.3</version>
+  <version>0.0.4</version>
   <packaging>jar</packaging>
 
   <name>Simple Request Service</name>
