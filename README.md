@@ -56,5 +56,5 @@ Tak utworzone żądanie można wysłać do serwisu:
 ```java
 Service service;
 // ...
-service.send(request);
+boolean inQueue = service.enqueue(request);
 ```
