@@ -4,7 +4,7 @@ Projekt dostarcza interfejs dostawcy serwisu wysyłania żądań HTTP.
 <dependency>
   <groupId>pl.koder95</groupId>
   <artifactId>srs</artifactId>
-  <version>0.0.1</version>
+  <version>0.1.0</version>
 </dependency>
 ```
 
@@ -56,5 +56,5 @@ Tak utworzone żądanie można wysłać do serwisu:
 ```java
 Service service;
 // ...
-service.send(request);
+boolean inQueue = service.enqueue(request);
 ```
