@@ -1,4 +1,7 @@
 # Simple Request Service
+[![pl](https://img.shields.io/badge/lang-pl-ff0000)](https://github.com/koder95/Simple-Request-Service/blob/master/README.md)
+[![en](https://img.shields.io/badge/lang-en-blue)](https://github.com/koder95/Simple-Request-Service/blob/master/README.en.md)
+
 Projekt dostarcza interfejs dostawcy serwisu wysyłania żądań HTTP.
 ```xml
 <dependency>
