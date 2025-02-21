@@ -4,7 +4,7 @@ Projekt dostarcza interfejs dostawcy serwisu wysyłania żądań HTTP.
 <dependency>
   <groupId>pl.koder95</groupId>
   <artifactId>srs</artifactId>
-  <version>0.1.0</version>
+  <version>0.1.1</version>
 </dependency>
 ```
 

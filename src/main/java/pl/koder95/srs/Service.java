@@ -30,6 +30,13 @@ public class Service implements Runnable {
         while (!closeRequest) {
             if (!requestQueue.isEmpty())
                 callHandler.accept(requestQueue.poll(), callback);
+            else {
+                try {
+                    wait(500);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+            }
         }
     }
 
